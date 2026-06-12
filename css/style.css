@@ -1,0 +1,343 @@
+css/
+/* الإعدادات العامة وتنسيق الخطوط */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f9fc;
+    color: #2b2d42;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.7;
+}
+
+/* التنسيق للوضع الداكن (Dark Mode) عند تفعيله بالزر */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+body.dark-theme #home,
+body.dark-theme .service-card,
+body.dark-theme .doctor-card,
+body.dark-theme .form-container,
+body.dark-theme input {
+    background-color: #161625;
+    color: #ffffff;
+}
+body.dark-theme input {
+    border-color: #333;
+}
+body.dark-theme h2, body.dark-theme h3 {
+    color: #4ea8de;
+}
+
+/* شريط التنقل (الهيدر) */
+header {
+    background: #1582a7;
+    color: #ffffff;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d8f3dc;
+}
+
+#menuBtn {
+    display: none;
+    background: #0096c7;
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* تنسيق هوم (نصوص على اليمين وصورة على اليسار) */
+section {
+    padding: 70px 8%;
+}
+
+#home {
+    background: #ffffff;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* العناوين الرئيسية للأقسام */
+.section-title {
+    color: #0077b6;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1582a7;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ترتيب كروت الخدمات بشكل مصفوفة متجاورة احترافية */
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    width: 320px;
+    padding: 0 0 25px 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #1582a7;
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding: 0 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+/* تنسيق كروت طاقم الأطباء */
+.doctors-container {
+    display: flex;
+    justify-content: center;
+}
+
+.doctor-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    border-top: 5px solid #0096c7;
+    max-width: 400px;
+    width: 100%;
+}
+
+.avatar {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* تنسيق حقول الإدخال والفورم المطور */
+.form-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #fafafa;
+}
+
+input:focus {
+    border-color: #0096c7;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* الأزرار التفاعلية */
+button {
+    background: #0096c7;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #023e8a;
+    transform: scale(1.02);
+}
+
+#colorBtn {
+    width: auto;
+    background: #2a9d8f;
+}
+#colorBtn:hover {
+    background: #1e7166;
+}
+
+/* تنسيقات رسالة النجاح التفاعلية (تم) */
+#message {
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.success-box {
+    padding: 12px;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error-box {
+    padding: 12px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* الفوتر السفلي */
+footer {
+    background: #023e8a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* شاشات الهواتف والأجهزة الذكية */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header {
+        padding: 15px 5%;
+    }
+    #menuBtn {
+        display: block;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: #1582a7;
+        padding: 20px;
+    }
+    nav.active {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
