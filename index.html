@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة الأسنان - نبض الابتسامة</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>عيادة نبض الابتسامة</h1>
+        </div>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#doctors">الأطباء</a></li>
+                <li><a href="#contact">حجز موعد</a></li>
+            </ul>
+        </nav>
+        <button id="menuBtn">☰ القائمة</button>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h2>ابتسامتك تبدأ هنا</h2>
+                    <p>نقدم أفضل خدمات علاج وتجميل الأسنان بأحدث التقنيات العالمية وبأيدي أمهر الأطباء المتميزين لتنعم بابتسامة وثقة لا مثيل لها.</p>
+                    <button id="colorBtn">✨ تبديل مظهر الموقع</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.jpg" alt="واجهة العيادة" class="responsive-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 class="section-title">خدماتنا المتميزة</h2>
+            <div class="services-container">
+                <article class="service-card">
+                    <img src="images/clean.jpg" alt="تنظيف الأسنان">
+                    <h3>تنظيف الأسنان</h3>
+                    <p>تنظيف وعناية كاملة وإزالة الجير والتصبغات لحماية اللثة والأسنان.</p>
+                </article>
+
+                <article class="service-card">
+                    <img src="images/whitening.jpg" alt="تبييض الأسنان">
+                    <h3>تبييض الأسنان</h3>
+                    <p>الحصول على ابتسامة ناصعة ومشرقة بأحدث تقنيات الليزر الآمنة.</p>
+                </article>
+
+                <article class="service-card">
+                    <img src="images/braces.jpg" alt="تقويم الأسنان">
+                    <h3>تقويم الأسنان</h3>
+                    <p>تصحيح وترتيب الأسنان وعلاج الفراغات بأحدث أنواع التقويم.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="doctors">
+            <h2 class="section-title">طاقم الأطباء</h2>
+            <div class="doctors-container">
+                <div class="doctor-card">
+                    <div class="avatar">👨‍⚕️</div>
+                    <h3>د. عمران</h3>
+                    <p>طبيب أسنان عام واختصاصي تجميل وزراعة الأسنان</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">حجز موعد إلكتروني</h2>
+            <div class="form-container">
+                <form id="bookingForm">
+                    <div class="input-group">
+                        <label for="name">الاسم الكامل:</label>
+                        <input type="text" id="name" placeholder="أدخل اسمك الكريم">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">البريد الإلكتروني:</label>
+                        <input type="email" id="email" placeholder="name@example.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="date">تاريخ الموعد المناسب:</label>
+                        <input type="date" id="date">
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">تأكيد وإرسال الحجز</button>
+                </form>
+                <div id="message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة عيادة نبض الابتسامة © 2026</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
